@@ -39,4 +39,6 @@ json objects themselves so the next few lines are just parsing through and getti
 the smartenit api document to observe the data format that these lines are parsing throug. Below these, you can store the info into whatever database as you please.
 
 
-
+extra info:
+There is an included app.js file that works as a backend for delivering request in node.js. If you want to see more then visit the full repository
+https://github.com/floydw1234/smartenitLoggin
