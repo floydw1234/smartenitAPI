@@ -29,5 +29,14 @@ after a couple of seconds
 NodeJS/Hub approach:
 This one is slightly more simple than the last. The smartinet zigbee system has a software and 
 zigbee communication codebase that makes it easy to get the data from the sensors. The file
-fetchPower.js does a couple of things. First
+fetchPower.js does a couple of things and all of these things are in a callback. srry. The first 
+callback is a request to the hub asking for a list of sensors. Once it has a list of sensors on 
+the zigbee network, the for loop "for (i = 1; i < jsonParsed.devices.length; i++) {" on line 56
+is iterating through the list of devices(exluding the first one because the first device from the 
+request will always be the hub itself and has no meaningfull power data). The devices objects are
+json objects themselves so the next few lines are just parsing through and getting the
+ information from the object that it can.  You can reference
+the smartenit api document to observe the data format that these lines are parsing throug. Below these, you can store the info into whatever database as you please.
+
+
 
